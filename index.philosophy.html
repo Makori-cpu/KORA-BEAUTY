@@ -1,0 +1,331 @@
+  <!-- The Gentle Standard Do’s Section (All-in-one, copy-pasteable) -->
+  <!-- MOVED TO BOTTOM -->
+  <!-- The Gentle Standard Do’s Section (All-in-one, copy-pasteable) -->
+  <section id="gentle-dos-allinone">
+    <style>
+      .gentle-dos-bg {
+        background: linear-gradient(90deg, #fff6f9 0%, #ffe5f0 100%);
+        border-radius: 2.5rem;
+        box-shadow: 0 8px 32px 0 rgba(209,107,165,0.10), 0 2px 18px #f8b6d8;
+        padding: 3.5rem 2vw 3.5rem 2vw;
+        margin: 3.5rem auto 2.5rem auto;
+        max-width: 1100px;
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+        align-items: center;
+        justify-content: center;
+      }
+      .gentle-dos-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        min-width: 320px;
+      }
+      .gentle-dos-item {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        cursor: pointer;
+        border-radius: 1.5rem;
+        transition: background 0.18s;
+        padding: 0.3rem 0.7rem 0.3rem 0.2rem;
+      }
+      .gentle-dos-item.active, .gentle-dos-item:hover {
+        background: #fbeaf7;
+      }
+      .gentle-dos-num {
+        font-family: 'Poppins', 'Nunito', Arial, sans-serif;
+        font-size: 2.1rem;
+        font-weight: 900;
+        color: #d16ba5;
+        background: #fff;
+        border-radius: 50%;
+        width: 2.7rem;
+        height: 2.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 12px #f8b6d8;
+        border: 2px solid #f8b6d8;
+        margin-right: 0.2rem;
+        transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+      }
+      .gentle-dos-item.active .gentle-dos-num, .gentle-dos-item:hover .gentle-dos-num {
+        background: #d16ba5;
+        color: #fff;
+        transform: scale(1.10);
+        box-shadow: 0 4px 18px #f8b6d8;
+        border-color: #d16ba5;
+      }
+      .gentle-dos-heading {
+        font-family: 'Nunito', 'Poppins', Arial, sans-serif;
+        font-size: 1.18rem;
+        font-weight: 800;
+        color: #a05c8c;
+        letter-spacing: 0.01em;
+        transition: color 0.2s;
+      }
+      .gentle-dos-item.active .gentle-dos-heading, .gentle-dos-item:hover .gentle-dos-heading {
+        color: #d16ba5;
+      }
+      .gentle-dos-circle-outer {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 320px;
+      }
+      .gentle-dos-circle {
+        width: 340px;
+        height: 340px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 32px 0 rgba(209,107,165,0.10), 0 2px 18px #f8b6d8, 0 0 32px 0 #ffe5f0;
+        position: relative;
+        transition: box-shadow 0.3s;
+        overflow: hidden;
+        border: 4px solid #ffe5f0;
+        animation: gentle-glow 2.5s ease-in-out infinite alternate;
+      }
+      @keyframes gentle-glow {
+        0% { box-shadow: 0 8px 32px 0 rgba(209,107,165,0.10), 0 2px 18px #f8b6d8, 0 0 32px 0 #ffe5f0; }
+        100% { box-shadow: 0 8px 48px 0 rgba(209,107,165,0.18), 0 2px 28px #f8b6d8, 0 0 64px 0 #ffe5f0; }
+      }
+      .gentle-dos-circle-text {
+        font-family: 'Nunito', 'Quicksand', 'Poppins', Arial, sans-serif;
+        font-size: 1.25rem;
+        color: #222;
+        font-weight: 700;
+        text-align: center;
+        padding: 2.2rem;
+        display: block;
+        opacity: 1;
+        border-radius: 1.5rem;
+        background: transparent;
+        transition: opacity 0.5s, transform 0.5s;
+        min-height: 4.5rem;
+      }
+      .gentle-dos-circle-text.fade-out {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      .gentle-dos-circle-text.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (max-width: 900px) {
+        .gentle-dos-bg {
+          flex-direction: column;
+          gap: 2.5rem;
+          padding: 2rem 0.5rem 2rem 0.5rem;
+        }
+        .gentle-dos-circle {
+          width: 90vw;
+          max-width: 320px;
+          height: 90vw;
+          max-height: 320px;
+        }
+        .gentle-dos-list {
+          min-width: unset;
+        }
+        .gentle-dos-circle-outer {
+          min-width: unset;
+        }
+      }
+    </style>
+    <div class="gentle-dos-bg">
+      <div class="gentle-dos-list">
+        <div class="gentle-dos-item active" data-index="0"><span class="gentle-dos-num">1</span><span class="gentle-dos-heading">Choose gentle cleansers</span></div>
+        <div class="gentle-dos-item" data-index="1"><span class="gentle-dos-num">2</span><span class="gentle-dos-heading">Moisturize daily</span></div>
+        <div class="gentle-dos-item" data-index="2"><span class="gentle-dos-num">3</span><span class="gentle-dos-heading">Use sunscreen every morning</span></div>
+        <div class="gentle-dos-item" data-index="3"><span class="gentle-dos-num">4</span><span class="gentle-dos-heading">Introduce actives slowly</span></div>
+        <div class="gentle-dos-item" data-index="4"><span class="gentle-dos-num">5</span><span class="gentle-dos-heading">Listen to your skin</span></div>
+        <div class="gentle-dos-item" data-index="5"><span class="gentle-dos-num">6</span><span class="gentle-dos-heading">Be consistent, not excessive</span></div>
+      </div>
+      <div class="gentle-dos-circle-outer">
+        <div class="gentle-dos-circle">
+          <span class="gentle-dos-circle-text fade-in" id="gentleDosTextAll">Mild cleansers wash away dirt without stripping your skin’s natural oils.</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      const gentleDosData = [
+        "Mild cleansers wash away dirt without stripping your skin’s natural oils.",
+        "Hydration keeps your skin barrier strong, smooth, and resilient.",
+        "Daily SPF protects your skin from sun damage and early aging.",
+        "Start small with powerful ingredients so your skin adapts comfortably.",
+        "When your skin feels stressed, scale back to simple, calming care.",
+        "A simple, steady routine works better than too many products at once."
+      ];
+      const dosItems = document.querySelectorAll('#gentle-dos-allinone .gentle-dos-item');
+      const dosText = document.getElementById('gentleDosTextAll');
+      let dosActive = 0;
+      function setDosActive(idx) {
+        if (dosActive === idx) return;
+        dosItems[dosActive].classList.remove('active');
+        dosItems[idx].classList.add('active');
+        dosText.classList.remove('fade-in');
+        dosText.classList.add('fade-out');
+        setTimeout(() => {
+          dosText.textContent = gentleDosData[idx];
+          dosText.classList.remove('fade-out');
+          dosText.classList.add('fade-in');
+        }, 350);
+        dosActive = idx;
+      }
+      dosItems.forEach((el, idx) => {
+        el.addEventListener('mouseenter', () => setDosActive(idx));
+        el.addEventListener('click', () => setDosActive(idx));
+      });
+    </script>
+  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Philosophy - Kora Beauty</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Work+Sans:wght@400;500&family=Inter:wght@400;500;700&family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    .philosophy-marquee-container {
+      width: 100vw;
+      color: #fcb7b7;
+      font-family: 'Poppins', 'Nunito', 'Brush Script MT', cursive, serif;
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      margin-top: 0.2em;
+    }
+    .glow-body {
+      font-family: 'Work Sans', Arial, sans-serif;
+      font-size: 1.18rem;
+      color: #444;
+      text-align: center;
+      margin: 1.2rem auto 2.2rem auto;
+      max-width: 700px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Kora Beauty</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy-marquee-container">
+        <div class="philosophy-marquee">
+          <span class="philo-grey">OUR PHILOSOPHY</span>
+          <span class="philo-black">OUR PHILOSOPHY</span>
+          <span class="philo-grey">OUR PHILOSOPHY</span>
+          <span class="philo-black">OUR PHILOSOPHY</span>
+        </div>
+      </div>
+      <div class="glow-difference">
+        <span class="glow-line">THE GLOW</span><br>
+        <span class="glow-line">DIFFERENCE</span><br>
+        <span class="glow-by">BY KORA</span>
+      </div>
+      <p class="glow-body">
+        At Kora Beauty, we take a thoughtful approach to every formula. Only ingredients that genuinely benefit your skin are chosen for our products. We prioritize biocompatibility — selecting elements your skin can recognize, accept, and flourish with — ensuring that every product feels natural, safe, and effective in supporting your healthiest glow.
+      </p>
+      <div class="philo-img-row">
+        <div class="philo-img-frame">
+          <img src="css/js/images/skin.jpg.jpg" alt="Healthy Skin" class="philo-img" />
+        </div>
+        <div class="philo-img-text">
+          <p class="philo-img-body">
+            At Kora Beauty, we design our formulas to respect your skin’s natural balance. We focus on maintaining a healthy pH, choosing ingredients with small molecular structures for better absorption, and incorporating actives that protect and support the skin’s acid mantle. We call this our <span class="gentle-standard">Gentle Standard</span> — a promise that what we leave out is just as important as what we put in. You’ll never find harsh additives or unnecessary fillers in our line, only ingredients your skin truly welcomes.
+          </p>
+        </div>
+      </div>
+    <style>
+      .philosophy-marquee-container {
+        width: 100vw;
+        overflow: hidden;
+        background: transparent;
+        margin-bottom: 2.5rem;
+        padding-top: 1.2rem;
+      }
+      .philosophy-marquee {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 4.2rem;
+        font-weight: bold;
+        font-family: 'Poppins', Arial, sans-serif;
+        animation: marquee 12s linear infinite;
+        will-change: transform;
+      }
+      .philo-grey {
+        color: #bdbdbd;
+        font-weight: bold;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin-right: 2.2rem;
+        letter-spacing: 0.08em;
+      }
+      .philo-black {
+        color: #111;
+        font-weight: bold;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin-right: 2.8rem;
+        letter-spacing: 0.08em;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .glow-body {
+        font-family: 'Work Sans', Arial, sans-serif;
+        font-size: 1.18rem;
+        color: #444;
+        text-align: center;
+        margin: 1.2rem auto 2.2rem auto;
+        max-width: 700px;
+        line-height: 1.7;
+      }
+    </style>
+    </section>
+  </main>
+  <!-- The Gentle Standard Section -->
+  <section class="gentle-standard-section">
+    <div class="gentle-standard-container">
+      <div class="gentle-standard-subtitle">THE</div>
+      <div class="gentle-standard-title">
+        Gentle Standard<span class="gentle-standard-tm">&trade;</span>
+      </div>
+      <div class="gentle-standard-desc">
+        We follow The Gentle Standard™, a promise to leave out the ingredients most likely to disrupt or stress your skin. Research shows that certain additives can contribute to irritation, dryness, or breakouts — so we choose not to include them. They’re not villains, just unnecessary when your goal is healthy, balanced skin. By removing them, your skin has the space to reset, breathe, and return to its natural glow. That’s the heart of our philosophy: gentle, effective care that always respects your skin barrier.
+      </div>
+      <div class="gentle-standard-tips">
+        <div>Choose gentle cleansers that don’t strip your skin.</div>
+        <div>Moisturize daily to keep your barrier strong and hydrated.</div>
+        <div>Use sunscreen every morning to protect from UV damage.</div>
+        <div>Introduce actives slowly so your skin can adapt with ease.</div>
+        <div>Listen to your skin — simplify when it feels sensitive or stressed.</div>
+        <div>Be consistent, not excessive — a simple routine done daily beats a complicated one.</div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Kora Beauty. All rights reserved.</p>
+  </footer>
+</body>
+</html>
