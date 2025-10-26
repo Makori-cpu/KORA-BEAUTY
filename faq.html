@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Kora Beauty</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #fff6f9 0%, #e0f7fa 100%);
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', 'Poppins', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #fff6f9;
+      box-shadow: 0 2px 12px #f8b6d822;
+      padding: 1.2rem 0 0.7rem 0;
+      margin-bottom: 2.2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 2.2rem;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    .has-submenu:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 2.2rem;
+      background: #fff6f9;
+      border-radius: 1rem;
+      box-shadow: 0 4px 18px #f8b6d8;
+      min-width: 180px;
+      z-index: 10;
+      padding: 0.5rem 0;
+    }
+    .submenu li {
+      display: block;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+    }
+    .submenu li a {
+      color: #d16ba5;
+      text-decoration: none;
+      display: block;
+      transition: background 0.18s;
+    }
+    .submenu li a:hover {
+      background: #fbeaf7;
+      color: #222;
+      border-radius: 0.7rem;
+    }
+    .faq-container {
+      max-width: 700px;
+      margin: 3rem auto 3rem auto;
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px 0 rgba(209,107,165,0.10), 0 2px 18px #f8b6d8;
+      padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+      color: #444;
+      min-width: 320px;
+    }
+    .faq-title {
+      font-family: 'Poppins', serif;
+      font-size: 2.1rem;
+      color: #d16ba5;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .faq-item {
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid #ffe5f0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      font-weight: 700;
+      color: #a05c8c;
+      margin-bottom: 0.4rem;
+      font-size: 1.13rem;
+    }
+    .faq-answer {
+      color: #444;
+      margin-left: 1.2rem;
+      font-size: 1rem;
+    }
+    footer {
+      background: #fff6f9;
+      text-align: center;
+      padding: 1.2rem 0 0.7rem 0;
+      margin-top: auto;
+      font-size: 1rem;
+      color: #a05c8c;
+      border-top: 1px solid #ffe5f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Kora Beauty</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.philosophy.html">Philosophy</a></li>
+        <li class="has-submenu"><a href="index.html#products">Products</a>
+          <ul class="submenu">
+            <li><a href="index.html#products">Our Product</a></li>
+            <li><a href="skin-harmony.html">Skin Harmony</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu"><a href="index.html#about">About</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-preview-link"><a href="header.html">Header preview</a></div>
+  </header>
+  <main>
+    <div class="faq-container">
+      <div class="faq-title">Frequently Asked Questions</div>
+      <div class="faq-item">
+        <div class="faq-question">What makes Kora Beauty different?</div>
+        <div class="faq-answer">We focus on gentle, biocompatible formulas that support your skin’s natural barrier, using only ingredients your skin truly welcomes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are your products cruelty-free?</div>
+        <div class="faq-answer">Yes! All Kora Beauty products are cruelty-free and never tested on animals.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I use your products if I have sensitive skin?</div>
+        <div class="faq-answer">Absolutely. Our products are formulated to be gentle and suitable for all skin types, including sensitive skin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Where are your products made?</div>
+        <div class="faq-answer">All of our products are made in facilities that meet the highest standards for quality and safety.</div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Kora Beauty. All rights reserved.</p>
+  </footer>
+</body>
+</html>
